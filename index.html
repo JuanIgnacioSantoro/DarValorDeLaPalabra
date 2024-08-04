@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Dar valor de la palabra</title>
+</head>
+<script>
+    function Convertir() {
+        var texto = '';
+        var textoConvertido = '';
+        const diccionario = {' ':0, 'a':1, 'b':2, 'c':3, 'd':4, 'e':5, 'f':6, 'g':7, 'h':8, 'i':9, 'j':10, 'k':11, 'l':12, 'm':13, 'n':14, 'ñ':15, 'o':16, 'p':17, 'q':18, 'r':19, 's':20, 't':21, 'u':22, 'v':23, 'w':24, 'x':25, 'y':26, 'z':27};
+        var Conversion = 0;
+
+        texto = prompt('Ingresar texto');
+
+        var resultado = texto.toLowerCase().split('').map(x => diccionario[x] || 0).reduce( (x,y) => Conversion=Conversion+y );
+        
+        alert(resultado);
+    }
+</script>
+<body>
+    <h1>
+        Dar valor de la palabra.
+    </h1>
+    <button onclick='Convertir()'>Convertir</button>
+</body>
+</html>
